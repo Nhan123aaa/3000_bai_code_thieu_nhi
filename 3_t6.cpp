@@ -3,7 +3,7 @@ graphics in Dev-C++ - nguyenvanquan7826
 */
 
 #include <winbgim.h> 
-void dichuyen(int x,int y){
+void vehcn(int x,int y){
 	
 		cleardevice();
 		setfillstyle((x+y)%11+1,(x+y)%14+1);
@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
 	while(getch()!=27) {delay(1);
 		int cur = (int)getch();
 		switch (cur){
-			case 72: y-=10; dichuyen(x,y); break;
-			case 75: x-=10; dichuyen(x,y); break;
-			case 77: x+=10; dichuyen(x,y); break;
-			case 80: y+=10; dichuyen(x,y); break;
+			case 72: y-=10; vehcn(x,y); break;//di len
+			case 75: x-=10; vehcn(x,y); break;//qua trai
+			case 77: x+=10; vehcn(x,y); break;//qua phai
+			case 80: y+=10; vehcn(x,y); break;//di xuong
 		}
 	
 	}
